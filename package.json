@@ -1,0 +1,40 @@
+{
+  "name": "career-ops-template-template",
+  "version": "0.1.0",
+  "description": "The career-ops template-pack scaffold: a valid, installable example pack plus the pack validator and authoring guide.",
+  "license": "MIT",
+  "author": "Dax Davis <dax@rubicontv.com>",
+  "homepage": "https://github.com/rubicon/career-ops-template-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubicon/career-ops-template-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubicon/career-ops-template-template/issues"
+  },
+  "keywords": [
+    "career-ops",
+    "career-ops-templates",
+    "cv",
+    "resume",
+    "cover-letter",
+    "ats",
+    "template-pack"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "smoke": "node test/smoke.mjs",
+    "validate": "node validate-template-pack.mjs --pack pack.json --root .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "prettier": "^3.4.2"
+  }
+}

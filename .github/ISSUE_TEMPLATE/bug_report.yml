@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a reproducible problem with the pack
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please do not include any
+        personal data (no real CV content), and do not report security issues
+        here (see SECURITY.md).
+  - type: input
+    id: pack-version
+    attributes:
+      label: Pack version
+      placeholder: e.g. 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: theme
+    attributes:
+      label: Theme or template
+      placeholder: e.g. ledger, or example
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use a small, non-personal sample CV if the input matters.
+      placeholder: |
+        1. Copy templates/cv-template.<id>.html into career-ops
+        2. Generate a PDF with that template
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: no-personal-data
+    attributes:
+      label: Confirmation
+      options:
+        - label: This report contains no personal data (no real CV content).
+          required: true

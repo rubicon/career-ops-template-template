@@ -1,0 +1,198 @@
+<!-- career-ops-template
+name: Example
+description: Plain monochrome baseline (Georgia serif, full-width ruled headers). Copy this pack and diverge; see docs/AUTHORING.md.
+version: 0.1.0
+date: 2026-07-08
+origin: reactive-resume/rhyhorn
+atsRisk: none
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cover Letter — {{NAME}}</title>
+<style>
+  /* Ledger — cover-letter companion to cv-template.ledger.html. Same Georgia
+     system stack, same monochrome palette, same heavy masthead rule, so the
+     letter renders as a visual match to the CV. */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Disable fi/fl/ffi ligatures. Headless Chromium substitutes these letter
+       pairs with the Unicode glyphs U+FB01/FB02/FB03 at PDF layout time, and PDF
+       text extractors (what ATS systems read) decode them back to those
+       codepoints, so "verification" becomes "veriﬁcation" and a literal keyword
+       search misses it. Required ligatures (rlig) stay on. */
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0, "dlig" 0;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: Georgia, 'Times New Roman', 'DejaVu Serif', serif;
+    font-size: 11.5pt;
+    line-height: 1.65;
+    color: #1A1A1A;
+    background: #ffffff;
+    /* Disable ligatures here as well; see the * rule above. */
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0, "dlig" 0;
+  }
+
+  /* Links must never break across lines */
+  a {
+    white-space: nowrap;
+  }
+
+  /* ---------- Masthead (matches the Ledger CV exactly) ---------- */
+  .name {
+    font-family: Georgia, 'Times New Roman', 'DejaVu Serif', serif;
+    font-size: 26pt;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    color: #111111;
+    margin-bottom: 6px;
+  }
+
+  .contact, .credentials {
+    font-size: 10.5pt;
+    color: #1A1A1A;
+    line-height: 1.4;
+    margin-bottom: 2px;
+  }
+
+  .contact a, .credentials a, .footnotes a {
+    color: #1A1A1A;
+    text-decoration: none;
+  }
+
+  /* The CV's heavy masthead rule, carried by the divider (a border, never a
+     glyph). */
+  .divider {
+    border: none;
+    border-top: 2px solid #111111;
+    margin: 9px 0 26px;
+  }
+
+  /* Structural moment: the CV's ruled-header treatment, sans rule. */
+  .role-title {
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: none;
+    color: #1A1A1A;
+    margin-top: 12px;
+    margin-bottom: 3px;
+  }
+
+  .dateline {
+    font-size: 10.5pt;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+
+  .greeting {
+    font-size: 11.5pt;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 11.5pt;
+    line-height: 1.65;
+    margin-bottom: 8px;
+  }
+
+  .achievements {
+    list-style: none;
+    margin-bottom: 4px;
+  }
+
+  .achievements li {
+    position: relative;
+    padding-left: 13px;
+    margin-bottom: 5px;
+    line-height: 1.55;
+  }
+
+  .achievements li::before {
+    content: "\2013"; /* en dash — the Ledger list marker */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #111111;
+  }
+
+  .achievements li strong {
+    font-weight: 700;
+    color: #111111;
+  }
+
+  .language-closing {
+    font-style: italic;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+
+  .footnotes {
+    margin-top: 12px;
+    padding-top: 5px;
+    border-top: 1px solid #999999;
+  }
+
+  .footnotes p {
+    font-size: 10pt;
+    color: #555555;
+    line-height: 1.4;
+    margin-bottom: 3px;
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+  /* Recipient address block (business-letter form). Ink only: accent is
+     forbidden on letter furniture. When {{RECIPIENT_BLOCK}} is empty the whole
+     element is absent (no box, no dangling label, no collapsed gap) and the
+     dateline's own bottom margin carries the date -> Re: -> salutation rhythm. */
+  .recipient {
+    margin: 0 0 12pt;
+    color: #1A1A1A;
+    line-height: 1.45;
+  }
+  .recipient div {
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="name">{{NAME}}</div>
+  <div class="contact">{{CONTACT_LINE}}</div>
+  {{CREDENTIALS_BLOCK}}
+  <hr class="divider">
+  <div class="dateline">{{DATELINE}}</div>
+  {{RECIPIENT_BLOCK}}
+  <div class="role-title">Re: Application for {{ROLE_TITLE}}</div>
+
+
+  {{GREETING_BLOCK}}
+  <p>{{OPENING}}</p>
+  <p>{{PROFILE_INTRO}}</p>
+
+  {{ACHIEVEMENTS_BLOCK}}
+
+  {{PROBLEMS_BLOCK}}
+  {{CLOSING_BLOCK}}
+  {{LANGUAGE_CLOSING_BLOCK}}
+  {{FOOTNOTES_BLOCK}}
+</body>
+</html>

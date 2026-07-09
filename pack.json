@@ -1,0 +1,53 @@
+{
+  "packVersion": 1,
+  "id": "example",
+  "name": "career-ops-template-example",
+  "displayName": "Example",
+  "description": "The template-pack scaffold: one plain, ATS-strict CV and cover-letter pair to copy and diverge from.",
+  "author": "Dax C. Davis",
+  "homepage": "https://github.com/rubicon/career-ops-template-template",
+  "license": "MIT",
+  "version": "0.1.0",
+  "minCareerOpsVersion": "1.18.0",
+  "attribution": [
+    {
+      "source": "Reactive Resume",
+      "author": "Amruth Pillai",
+      "license": "MIT",
+      "url": "https://github.com/amruthpillai/reactive-resume",
+      "note": "The plain baseline derives from the Reactive Resume rhyhorn template; reimplemented as ATS-safe single-column HTML."
+    }
+  ],
+  "templates": [
+    {
+      "id": "example",
+      "displayName": "Example",
+      "description": "Plain monochrome baseline: Georgia serif, full-width ruled headers, right-flush dates. The plainest ATS-safe starting point; copy it and diverge.",
+      "kind": "both",
+      "ats": true,
+      "atsRisk": "none",
+      "origin": "rhyhorn",
+      "register": "plain baseline",
+      "levers": {
+        "face": "georgia",
+        "axis": "left",
+        "header": "full-rule",
+        "accent": "mono",
+        "density": "regular"
+      },
+      "accent": {
+        "hex": null,
+        "contrastOnWhite": null,
+        "grayscaleSafe": true
+      },
+      "files": {
+        "cv": "templates/cv-template.example.html",
+        "cover": "templates/cover-letter-template.example.html"
+      },
+      "previews": {
+        "cv": "templates/previews/example-cv.png",
+        "cover": "templates/previews/example-cover.png"
+      }
+    }
+  ]
+}
