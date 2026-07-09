@@ -1,0 +1,134 @@
+{
+  "_comment": "Non-personal sample data used only to render the preview PNGs. Fictional persona (Jack Ryan, Tom Clancy's Jack Ryan universe), example.com contacts, invented career. Adapted from a JSON-Resume-style fixture into the shape scripts/generate-previews.mjs fills. Editing this changes what the previews show; run `npm run previews` after.",
+  "contact": {
+    "name": "Jack Ryan",
+    "label": "Intelligence Executive & National Security Leader",
+    "phone": "(410) 555-0173",
+    "email": "jack.ryan@example.com",
+    "location": "Annapolis, Maryland",
+    "linkedin_url": "https://linkedin.com/in/jack-p-ryan",
+    "linkedin_display": "linkedin.com/in/jack-p-ryan",
+    "portfolio_url": "https://jackryan.example.com",
+    "portfolio_display": "jackryan.example.com"
+  },
+  "summary": "Career intelligence professional who rose from CIA analyst to Deputy Director of Central Intelligence, National Security Advisor, and President of the United States. Two decades translating raw intelligence into decisive policy under crisis conditions, brokering high-stakes defections, and leading at the highest levels of government. Calm under pressure, analytically rigorous.",
+  "competencies": [
+    "All-Source Intelligence Analysis",
+    "Counterintelligence Tradecraft",
+    "Crisis Management",
+    "Interagency Coordination",
+    "National Security Policy",
+    "HUMINT & Defector Handling",
+    "Executive & Presidential Briefing",
+    "Strategic Forecasting"
+  ],
+  "experience": [
+    {
+      "company": "Government of the United States",
+      "role": "President of the United States",
+      "location": "Washington, D.C.",
+      "period": "1996–Present",
+      "bullets": [
+        "Reconstituted continuity of government after a catastrophic decapitation strike on the Capitol.",
+        "Promulgated the “Ryan Doctrine,” holding foreign leaders personally accountable for attacks on U.S. citizens; led the national response to a conventional Pacific war."
+      ]
+    },
+    {
+      "company": "The White House, National Security Council",
+      "role": "National Security Advisor",
+      "location": "Washington, D.C.",
+      "period": "1993–1995",
+      "bullets": [
+        "Coordinated interagency national security policy across State, Defense, and the Intelligence Community.",
+        "Managed rapidly escalating international crises directly from the Situation Room."
+      ]
+    },
+    {
+      "company": "Central Intelligence Agency",
+      "role": "Deputy Director of Central Intelligence",
+      "location": "Langley, VA",
+      "period": "1990–1992",
+      "bullets": [
+        "Directed sensitive operations and all-source analysis supporting the President and NSC.",
+        "Managed back-channel de-escalation during a nuclear crisis; oversaw compartmented programs and classified budgets."
+      ]
+    },
+    {
+      "company": "Central Intelligence Agency",
+      "role": "Acting Deputy Director of Intelligence",
+      "location": "Langley, VA",
+      "period": "1985–1989",
+      "bullets": [
+        "Brokered the defection of a Soviet ballistic-missile submarine and its commander.",
+        "Ran the CARDINAL exfiltration and induced a senior KGB officer to defect."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Operation RED OCTOBER",
+      "year": "1984",
+      "description": "Directed the analysis and back-channel effort securing the defection of a Soviet submarine commander and his vessel intact."
+    },
+    {
+      "title": "CARDINAL Extraction",
+      "year": "1986",
+      "description": "Exfiltrated the CIA’s highest-placed Soviet agent under imminent compromise; turned a hostile intelligence chief into a U.S. asset."
+    },
+    {
+      "title": "The Campus / Hendley Associates",
+      "year": "1995",
+      "description": "Founded a self-funding, deniable counterterrorism capability under private-firm cover."
+    }
+  ],
+  "education": [
+    { "degree": "Ph.D., History", "org": "Georgetown University", "year": "1981" },
+    { "degree": "B.A., Economics", "org": "Boston College", "year": "1972" }
+  ],
+  "certifications": [
+    {
+      "title": "Certified Public Accountant (CPA)",
+      "org": "State Board of Accountancy",
+      "year": "1974"
+    },
+    { "title": "Top Secret/SCI Security Clearance", "org": "U.S. Government", "year": "1983" },
+    {
+      "title": "Series 7 (General Securities Representative)",
+      "org": "NYSE / NASD",
+      "year": "1973"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Intelligence & Analysis",
+      "items": "all-source analysis, counterintelligence tradecraft, strategic warning, HUMINT operations"
+    },
+    {
+      "category": "Leadership & Governance",
+      "items": "crisis management, interagency coordination, classified budget oversight, national security policy"
+    },
+    {
+      "category": "Communication",
+      "items": "executive & presidential briefing, negotiation with heads of state, historical & policy writing"
+    }
+  ],
+  "cover": {
+    "role_title": "Managing Director, Global Risk Advisory",
+    "dateline": "July 9, 2026",
+    "recipient": {
+      "name": "Ms. Grace Hollis",
+      "title": "Chief Executive Officer",
+      "company": "Chesapeake Strategic Group",
+      "address_lines": ["1200 Light Street", "Baltimore, MD 21230"]
+    },
+    "greeting": "Dear Ms. Hollis:",
+    "opening": "I am writing to apply for the Managing Director, Global Risk Advisory position at Chesapeake Strategic Group. After two decades translating raw intelligence into decisive policy at the highest levels of government, I want to bring that judgment to the private sector, and Chesapeake’s reputation for unvarnished counsel makes it the firm I want to do that with.",
+    "profile_intro": "Risk advisory succeeds or fails on the quality of its assessments under pressure. My career has been spent making calls when the information was incomplete and the stakes were absolute: directing all-source analysis for the President and the National Security Council, coordinating interagency policy, and managing back-channel de-escalation during a nuclear crisis.",
+    "achievements": [
+      "Brokered the defection of a Soviet ballistic-missile submarine and its commander when the prevailing assessment said it could not be done.",
+      "Ran the extraction of our highest-placed source in Moscow under imminent compromise.",
+      "Built an eight-figure portfolio as a CPA and broker before entering public service; I speak the language of balance sheets and exposure."
+    ],
+    "closing": "I would welcome the chance to discuss how my experience could serve Chesapeake’s clients. I am available at your convenience and can be reached at (410) 555-0173 or jack.ryan@example.com."
+  }
+}
