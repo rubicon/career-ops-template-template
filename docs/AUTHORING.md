@@ -31,7 +31,7 @@ into a career-ops checkout. Core never executes anything in a pack.
 4. Rename the two template files to `cv-template.<theme-id>.html` and
    `cover-letter-template.<theme-id>.html`, set the meta block `name:` to the
    theme's display name, and fill in the `pack.json` entry.
-5. Regenerate the previews.
+5. Regenerate the previews: `npm run previews:setup` (once), then `npm run previews`.
 6. `npm install && npm run validate && npm test && npm run smoke` until green.
 
 ## Pack-wide invariants (non-negotiable, validator-enforced)
@@ -209,10 +209,27 @@ real risk behind `none`; the honest tier is the point.
 
 ## Previews
 
-Render each template filled with a small, non-personal sample CV and screenshot
-one page at 1224x1584 (8.5 by 11 inches at 144 dpi) to
-`templates/previews/<id>-cv.png` and `<id>-cover.png`. Regenerate previews
-whenever a template changes; the reactive README shows them in a gallery.
+Previews are rendered from `sample-cv.json` (small, non-personal sample data)
+and screenshot one page at 1224x1584 (8.5 by 11 inches at 144 dpi) to
+`templates/previews/<id>-cv.png` and `<id>-cover.png`. Regenerate them whenever a
+template changes:
+
+```bash
+npm run previews:setup   # one-time: installs Playwright + Chromium (not saved as a dependency)
+npm run previews         # renders every template in pack.json; scope with ids: npm run previews <id>
+```
+
+`scripts/generate-previews.mjs` is `pack.json`-driven, so it works unchanged for
+your pack: list your themes in `pack.json` and it renders them. Fill your own
+`sample-cv.json` fields; `test/previews-fill.test.mjs` (part of `npm test`) fails
+if a template has a placeholder your sample does not supply, so the two stay in
+sync. Playwright is installed on demand and is never a dependency, keeping the
+pack passive data.
+
+The previews **approximate** the authoritative career-ops render
+(`generate-pdf.mjs`, which uses `@page` margins and `preferCSSPageSize`); the
+script mimics the print margin with a screen-only padding rule, so the result is
+close, not pixel-for-pixel.
 
 ## Publish
 

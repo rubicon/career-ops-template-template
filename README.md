@@ -29,7 +29,8 @@ Click "Use this template" on GitHub, or clone it, then:
    contract. The first exercise is to claim your own coordinate in the taxonomy
    and diverge from the plain example.
 3. Rename the template files to `cv-template.<id>.html` and
-   `cover-letter-template.<id>.html`, restyle them, and regenerate the previews.
+   `cover-letter-template.<id>.html`, restyle them, and regenerate the previews
+   (`npm run previews:setup` once, then `npm run previews`).
 4. Run `npm install && npm run validate` until it passes.
 
 The example theme is deliberately plain (Georgia serif, monochrome, full-width

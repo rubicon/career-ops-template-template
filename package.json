@@ -29,6 +29,8 @@
     "test": "node --test",
     "smoke": "node test/smoke.mjs",
     "validate": "node validate-template-pack.mjs --pack pack.json --root .",
+    "previews:setup": "npm install --no-save playwright && npx playwright install chromium",
+    "previews": "node scripts/generate-previews.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

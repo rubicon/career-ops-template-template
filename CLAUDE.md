@@ -51,7 +51,10 @@ so a pack needs no hooks, no environment, and no network.
   with" lines. No em-dashes, no emojis in code, comments, docs, commits, issues,
   or PRs. Use `--` for a dash separator.
 - Run `npm run validate`, `npm test`, and `npm run format:check` before opening a
-  PR. Regenerate the previews when a template changes.
+  PR. Regenerate the previews when a template changes: `npm run previews:setup`
+  once, then `npm run previews` (approximates the authoritative career-ops
+  `generate-pdf.mjs` render; Playwright is installed on demand, never a
+  dependency).
 - The example theme stays plain. New designs belong in a copy of this pack (its
   own `career-ops-template-<id>` repository), not layered onto the example.
 
