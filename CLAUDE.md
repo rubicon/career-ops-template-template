@@ -39,6 +39,8 @@ so a pack needs no hooks, no environment, and no network.
 
 ## Commands
 
+- `npm ci` (or `npm install`) once after cloning; Prettier and commitlint are
+  devDependencies the commands below need.
 - `npm run validate` runs the validator against `pack.json`.
 - `npm test` runs the validator's unit tests (`node --test`).
 - `npm run smoke` asserts this pack validates against its own manifest.
