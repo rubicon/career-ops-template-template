@@ -1,6 +1,6 @@
 {
   "name": "career-ops-template-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The career-ops template-pack scaffold: a valid, installable example pack plus the pack validator and authoring guide.",
   "license": "MIT",
   "author": "Dax Davis <dax@rubicontv.com>",
