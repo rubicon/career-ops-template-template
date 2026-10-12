@@ -26,6 +26,7 @@
     "node": ">=20"
   },
   "scripts": {
+    "validate:changelog": "node scripts/validate-changelog.mjs",
     "test": "node --test",
     "smoke": "node test/smoke.mjs",
     "validate": "node validate-template-pack.mjs --pack pack.json --root .",

@@ -4,7 +4,7 @@ All notable changes to this project are documented in this file. The format is
 based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.1](https://github.com/rubicon/career-ops-template-template/compare/v0.1.0...v0.1.1) (2026-08-03)
+## [0.1.1] - 2026-08-03
 
 
 ### Features
@@ -17,4 +17,5 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 * **ci:** address the release-please 1Password item by UUID ([#16](https://github.com/rubicon/career-ops-template-template/issues/16)) ([fa175f2](https://github.com/rubicon/career-ops-template-template/commit/fa175f2b083ffa63530ff4f729137d2addc71ee9)), closes [#15](https://github.com/rubicon/career-ops-template-template/issues/15)
 
-## [Unreleased]
+[Unreleased]: https://github.com/rubicon/career-ops-template-template/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/rubicon/career-ops-template-template/releases/tag/v0.1.1
